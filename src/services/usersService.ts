@@ -12,5 +12,15 @@ export async function create(user: any) {
 
 export async function get() {
     const users = await usersRepository.get();
+    const formatedUsers = users.map((user) => {
+        return {...user, dateOfBirth: getStrDate(user.dateOfBirth)};
+    });
     return users;
+}
+
+function getStrDate(date: Date) {
+    const day = date.getDate();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    return `${day >= 10 ? day : '0' + day}/${month >= 10 ? month : '0' + month}/${year}`;
 }
