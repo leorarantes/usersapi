@@ -3,7 +3,7 @@
     "buildCommand": "npm run build",
     "functions": {
         "src/index.ts": {
-            "runtime": "@now/node-12"
+            "runtime": "node14"
         }
     }
 }
