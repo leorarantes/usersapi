@@ -1,9 +1,16 @@
 {
     "version": 2,
-    "buildCommand": "npm run build",
-    "functions": {
-        "api/index.ts": {
-            "memory": 1024
+    "builds": [
+        {
+            "src": "src/index.ts",
+            "use": "@vercel/node",
+            "buildCommand": "npm run build"
         }
-    }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/index.ts"
+        }
+    ]
 }
