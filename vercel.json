@@ -4,9 +4,7 @@
         {
             "src": "src/index.ts",
             "use": "@vercel/node",
-            "build": {
-                "command": "npm run build"
-            }
+            "command": "npm run build"
         }
     ],
     "routes": [
