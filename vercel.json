@@ -3,7 +3,7 @@
     "buildCommand": "npm run build",
     "functions": {
         "src/index.ts": {
-            "runtime": "node14"
+            "memory": 1024
         }
     }
 }
