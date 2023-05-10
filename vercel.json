@@ -2,9 +2,8 @@
     "version": 2,
     "buildCommand": "npm run build",
     "functions": {
-        "src/*": {
-            "runtime": "@vercel/node",
-            "entrypoint": "src/index.js"
+        "src/index.ts": {
+            "runtime": "@vercel/node"
         }
     }
 }
