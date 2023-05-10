@@ -15,7 +15,7 @@ export async function get() {
     const formatedUsers = users.map((user) => {
         return {...user, dateOfBirth: getStrDate(user.dateOfBirth)};
     });
-    return users;
+    return formatedUsers;
 }
 
 function getStrDate(date: Date) {
