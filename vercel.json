@@ -1,20 +1,10 @@
 {
     "version": 2,
-    "build": {
-        "commands": [
-            {
-                "command": "npm install"
-            },
-            {
-                "command": "npm run build",
-                "use": "@now/node-12"
-            }
-        ]
-    },
+    "buildCommand": "npm run build",
     "functions": {
         "src/*": {
             "runtime": "@vercel/node",
-            "entrypoint": "api/index.ts"
+            "entrypoint": "src/index.js"
         }
     }
 }
